@@ -2,23 +2,15 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styles from './CountryCard.module.css';
+import { useRouter } from 'next/navigation';
+import { Country } from 'Country';
 
-interface Country {
-	name: {
-		common: string;
-	};
-	flags: {
-		png: string;
-		svg: string;
-	};
-	population: number;
-	region: string;
-	capital: string;
-}
 interface Props {
 	country: Country;
 }
 export default function CountryCard({ country }: Props) {
+	const router = useRouter();
+
 	const [population, setPopulation] = useState('' + country.population);
 
 	useEffect(() => {
@@ -26,7 +18,10 @@ export default function CountryCard({ country }: Props) {
 	}, [country.population]);
 
 	return (
-		<article className={styles.article}>
+		<article
+			className={styles.article}
+			onClick={() => router.push(country.name.common)}
+		>
 			<Image
 				src={country.flags.png}
 				alt="country flag"

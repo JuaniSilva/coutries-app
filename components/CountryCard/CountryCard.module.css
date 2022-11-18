@@ -6,6 +6,7 @@
 	border-radius: 6px;
 	overflow: hidden;
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
 }
 .section {
 	padding: 1.5rem;
