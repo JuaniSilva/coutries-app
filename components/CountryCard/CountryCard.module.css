@@ -1,0 +1,27 @@
+.article {
+	max-width: 265px;
+	min-height: 336px;
+	max-height: 100%;
+	background-color: var(--white);
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.section {
+	padding: 1.5rem;
+}
+.section p {
+	font-size: 1.5rem;
+	font-weight: 800;
+	margin: 0;
+}
+.dlContainer {
+	display: flex;
+	gap: 0.25rem;
+}
+.dlContainer dt {
+	font-weight: 600;
+}
+.dlContainer dd {
+	margin: 0;
+}
