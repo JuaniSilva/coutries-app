@@ -1,6 +1,7 @@
 'use client';
 import { Country } from 'Country';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from './CountryView.module.css';
 
@@ -9,10 +10,6 @@ interface CountryViewProps {
 }
 
 function CountryView({ country }: CountryViewProps) {
-	console.log(
-		'🚀 ~ file: CountryView.tsx ~ line 12 ~ CountryView ~ country',
-		country
-	);
 	const [population, setPopulation] = useState('' + country.population);
 
 	const nativeName =
@@ -22,12 +19,16 @@ function CountryView({ country }: CountryViewProps) {
 			]
 		].common;
 
+	const currencies = Object.entries(country.currencies).map(
+		([key, value]) => value.name
+	);
+
 	useEffect(() => {
 		setPopulation(country.population.toLocaleString());
 	}, [country.population]);
 
 	return (
-		<section>
+		<section className={styles.section}>
 			<Image
 				src={country?.flags?.png}
 				alt="country flag"
@@ -63,14 +64,29 @@ function CountryView({ country }: CountryViewProps) {
 						<dd>{country.tld}</dd>
 					</div>
 					<div>
-						<dt>Currencies</dt>
-						<dd>{country.currencies.name}</dd>
+						<dt>Currencies:</dt>
+						<dd>{currencies.join(', ')}</dd>
 					</div>
 					<div>
 						<dt>Languages</dt>
 						<dd>{Object.keys(country.languages).join(', ')}</dd>
 					</div>
 				</dl>
+				<div className={styles.countryBorders}>
+					<p>Border Countries:</p>
+					<nav>
+						<ul>
+							{country?.borders &&
+								country.borders.map((borderCountry) => (
+									<li key={borderCountry}>
+										<Link href={borderCountry}>
+											{borderCountry}
+										</Link>
+									</li>
+								))}
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</section>
 	);

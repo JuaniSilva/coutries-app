@@ -1,0 +1,52 @@
+.section {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+.section > div {
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+.section > div dl {
+	display: flex;
+	flex-wrap: wrap;
+}
+.section > div dl > div {
+	display: flex;
+	width: 50%;
+	gap: 0.25rem;
+	margin-bottom: 1rem;
+}
+.section > div dl div dt {
+	font-weight: 600;
+}
+.section > div dl div dd {
+	margin: 0;
+}
+
+.countryBorders {
+	display: flex;
+	gap: 0.25rem;
+}
+.countryBorders p {
+	font-weight: 600;
+	white-space: nowrap;
+}
+.section > div ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 0.5rem;
+}
+.countryBorders a {
+	display: block;
+	width: fit-content;
+	padding: 0.25rem 1rem;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	color: var(--lm-very-Dark-Blue);
+	text-decoration: none;
+}
