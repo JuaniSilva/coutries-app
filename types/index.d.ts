@@ -20,8 +20,10 @@ declare module 'Country' {
 		capital: string;
 		tld: string[];
 		currencies: {
-			name: string;
-			symbol: string;
+			[key: string]: {
+				name: string;
+				symbol: string;
+			};
 		};
 		languages: {
 			[key: string]: string;
