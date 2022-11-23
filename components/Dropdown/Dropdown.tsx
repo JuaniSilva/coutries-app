@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import ThemeContext from '../../app/ThemeContext';
 import styles from './Dropdown.module.css';
 
 interface DropdownProps {
@@ -15,6 +16,8 @@ function Dropdown({
 	onSelect,
 	defaultLabel = '',
 }: DropdownProps) {
+	const theme = useContext(ThemeContext);
+
 	const [selectedItem, setSelectedItem] = useState(value || defaultLabel);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -43,7 +46,7 @@ function Dropdown({
 	}, [selectedItem]);
 
 	return (
-		<div className={styles.dropdown}>
+		<div className={`${styles.dropdown} ${styles[theme]}`}>
 			<button
 				className={isOpen ? 'is-open' : ''}
 				onClick={() => setIsOpen(!isOpen)}

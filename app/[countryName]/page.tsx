@@ -2,6 +2,8 @@ import '../../styles/globals.css';
 import styles from './Page.module.css';
 import CountryView from '../../components/CountryView/CountryView';
 import { Country } from 'Country';
+import Link from 'next/link';
+import LeftArrow from '../../components/Icons/LeftArrow/LeftArrow';
 
 interface PageProps {
 	params: {
@@ -50,7 +52,11 @@ async function page({ params }: PageProps) {
 
 	return (
 		<main className={styles.main}>
-			<CountryView country={parsedCountry} />;
+			<Link href="/" className="button-link">
+				<LeftArrow />
+				<p>Back</p>
+			</Link>
+			<CountryView country={parsedCountry} />
 		</main>
 	);
 }

@@ -1,14 +1,16 @@
 'use client';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from './CountryCard.module.css';
 import { useRouter } from 'next/navigation';
 import { Country } from 'Country';
+import ThemeContext from '../../app/ThemeContext';
 
 interface Props {
 	country: Country;
 }
 export default function CountryCard({ country }: Props) {
+	const theme = useContext(ThemeContext);
 	const router = useRouter();
 
 	const [population, setPopulation] = useState('' + country.population);
@@ -19,7 +21,7 @@ export default function CountryCard({ country }: Props) {
 
 	return (
 		<article
-			className={styles.article}
+			className={`${styles.article} ${styles[theme]}`}
 			onClick={() => router.push(country.name.common)}
 		>
 			<Image

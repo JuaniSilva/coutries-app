@@ -4,4 +4,5 @@
 	column-gap: 5.75%;
 	row-gap: 4rem;
 	align-items: stretch;
+	overflow: auto;
 }

@@ -27,4 +27,40 @@ html,
 body {
 	font-family: 'Nunito Sans', sans-serif;
 	background-color: var(--lm-very-Light-Gray);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+input,
+textarea,
+button {
+	font-family: inherit;
+}
+
+.dark body {
+	background-color: var(--dm-very-Dark-Blue);
+	color: var(--white);
+}
+.button-link {
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	color: var(--lm-very-Dark-Blue);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.dark .button-link {
+	color: var(--white);
+	background-color: var(--dm-dark-Blue);
+}
+.dark input {
+	background-color: var(--dm-dark-Blue);
+	color: var(--white);
+	caret-color: var(--white);
 }

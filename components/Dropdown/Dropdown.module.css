@@ -17,6 +17,11 @@
 	background-color: white;
 	border-radius: 4px;
 }
+.dark.dropdown button {
+	background-color: var(--dm-dark-Blue);
+	color: var(--white);
+}
+
 .dropdown button:focus {
 	outline: none;
 }
@@ -29,6 +34,9 @@
 	transform: translateY(-50%);
 	border: 0.5rem solid transparent;
 	border-top: 0.5rem solid #000;
+}
+.dark.dropdown > button::after {
+	border-top: 0.5rem solid var(--white);
 }
 
 .dropdown menu {
@@ -47,8 +55,16 @@
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
 }
+.dark.dropdown menu {
+	background-color: var(--dm-dark-Blue);
+	color: var(--white);
+}
+
 .dropdown menu li button {
 	padding: 0.5rem 1rem;
+}
+.dark.dropdown menu li button:hover {
+	background-color: var(--dm-very-Dark-Blue);
 }
 .dropdown menu li button:first-child {
 	margin-top: 0.25rem;

@@ -79,7 +79,10 @@ function CountryView({ country }: CountryViewProps) {
 							{country?.borders &&
 								country.borders.map((borderCountry) => (
 									<li key={borderCountry}>
-										<Link href={borderCountry}>
+										<Link
+											href={borderCountry}
+											className="button-link"
+										>
 											{borderCountry}
 										</Link>
 									</li>
