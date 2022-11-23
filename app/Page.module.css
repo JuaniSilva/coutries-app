@@ -5,6 +5,11 @@
 	flex-direction: column;
 	gap: 3rem;
 	margin: 0 auto;
-	padding: 5rem 0;
+	padding: 3rem 0;
 	height: 100%;
+}
+@media (max-width: 1248px) {
+	.main {
+		padding: 3rem 20px;
+	}
 }

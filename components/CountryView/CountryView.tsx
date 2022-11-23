@@ -34,6 +34,7 @@ function CountryView({ country }: CountryViewProps) {
 				alt="country flag"
 				width={560}
 				height={400}
+				className={styles.image}
 			/>
 			<div>
 				<h2>{country.name.common}</h2>

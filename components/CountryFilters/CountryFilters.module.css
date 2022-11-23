@@ -1,5 +1,12 @@
 .container {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 5rem;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+@media (max-width: 660px) {
+	.container .dropdown {
+		margin-top: 2rem;
+	}
 }

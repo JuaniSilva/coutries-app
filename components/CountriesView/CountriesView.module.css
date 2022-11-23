@@ -6,3 +6,9 @@
 	align-items: stretch;
 	overflow: auto;
 }
+
+@media (max-width: 768px) {
+	.countriesContainer {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+}

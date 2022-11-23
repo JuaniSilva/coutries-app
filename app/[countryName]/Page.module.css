@@ -7,6 +7,11 @@
 	flex-direction: column;
 	gap: 3rem;
 	margin: 0 auto;
-	padding: 5rem 0;
+	padding: 3rem 0;
 	overflow: overlay;
+}
+@media (max-width: 1248px) {
+	.main {
+		padding: 3rem 20px;
+	}
 }
