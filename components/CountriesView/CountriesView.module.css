@@ -1,7 +1,7 @@
 .countriesContainer {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	column-gap: 5.75%;
+	grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+	column-gap: 4rem;
 	row-gap: 4rem;
 	align-items: stretch;
 	overflow: auto;

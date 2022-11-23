@@ -1,5 +1,5 @@
 .article {
-	max-width: 265px;
+	min-width: 265px;
 	min-height: 336px;
 	max-height: 100%;
 	background-color: var(--white);
@@ -8,6 +8,9 @@
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	transition: all 0.3s ease;
+}
+.image {
+	width: 100%;
 }
 .section {
 	padding: 1.5rem;

@@ -29,6 +29,7 @@ export default function CountryCard({ country }: Props) {
 				alt="country flag"
 				width={265}
 				height={162}
+				className={styles.image}
 			/>
 			<section className={styles.section}>
 				<p>{country.name.common}</p>
